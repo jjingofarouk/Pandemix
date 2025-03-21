@@ -1,0 +1,25 @@
+.disease-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.disease-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.disease-card h3 {
+  margin: 10px 0;
+}
+
+.disease-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.disease-card a:hover {
+  text-decoration: underline;
+}
