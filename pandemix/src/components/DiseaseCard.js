@@ -1,15 +1,13 @@
+// /src/components/DiseaseCard.js
 import React from 'react';
 import '../styles/DiseaseCard.css';
 
-const DiseaseCard = ({ disease }) => {
+const DiseaseCard = ({ disease, onClick }) => {
   return (
-    <div className="disease-card">
-      {disease.image && (
-        <img src={disease.image} alt={`${disease.name} illustration`} />
-      )}
+    <div className="disease-card" onClick={() => onClick(disease)}>
       <h3>{disease.name}</h3>
-      <p>{disease.summary || 'No summary available'}</p>
-      <a href={`/disease/${disease.id}`}>Learn More</a>
+      <p>{disease.summary}</p>
+      <span className="learn-more">Click to learn more</span>
     </div>
   );
 };
