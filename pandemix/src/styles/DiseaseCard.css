@@ -1,25 +1,43 @@
+/* /src/styles/DiseaseCard.css */
 .disease-card {
   border: 1px solid #ddd;
   padding: 15px;
   border-radius: 5px;
   background-color: #f9f9f9;
-}
-
-.disease-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
+  cursor: pointer;
 }
 
 .disease-card h3 {
   margin: 10px 0;
 }
 
-.disease-card a {
+.disease-card .learn-more {
   color: #007bff;
-  text-decoration: none;
 }
 
-.disease-card a:hover {
-  text-decoration: underline;
+.disease-card:hover {
+  background-color: #f0f0f0;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
 }
