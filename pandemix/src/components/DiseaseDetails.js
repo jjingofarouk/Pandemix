@@ -1,21 +1,20 @@
+// /src/components/DiseaseModal.js
 import React from 'react';
 
-const DiseaseDetails = ({ disease }) => {
-  if (!disease) {
-    return <p>No disease selected.</p>;
-  }
+const DiseaseModal = ({ disease, onClose }) => {
+  if (!disease) return null;
 
   return (
-    <div className="disease-details">
-      <h2>{disease.name}</h2>
-      {disease.image && (
-        <img src={disease.image} alt={`${disease.name} illustration`} />
-      )}
-      <p>{disease.description || 'No detailed description available.'}</p>
-      <h3>Historical Impact</h3>
-      <p>{disease.impact || 'No historical impact data available.'}</p>
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <h2>{disease.name}</h2>
+        <p>{disease.description || 'No detailed description available.'}</p>
+        <h3>Historical Impact</h3>
+        <p>{disease.impact || 'No historical impact data available.'}</p>
+        <button onClick={onClose}>Close</button>
+      </div>
     </div>
   );
 };
 
-export default DiseaseDetails;
+export default DiseaseModal;
