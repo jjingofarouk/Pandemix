@@ -1,5 +1,6 @@
+// /src/hooks/useDiseaseData.js
 import { useState, useEffect } from 'react';
-import { fetchDiseaseData } from '../api/wikipediaApi';
+import { fetchDiseaseData } from '../api/diseaseApi';
 
 const useDiseaseData = (query) => {
   const [data, setData] = useState([]);
